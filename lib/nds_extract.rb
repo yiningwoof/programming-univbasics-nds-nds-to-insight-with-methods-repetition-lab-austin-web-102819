@@ -29,6 +29,8 @@ def list_of_directors(source)
 end
 
 def total_gross(source)
+  total = 0
+  list_of_directors(source).reduce{|name, total| total + directors_totals[name]}
   # Write this implementation
   #
   # Should use methods:
